@@ -1,0 +1,4 @@
+haslo
+=====
+
+Loan calculator engine.
