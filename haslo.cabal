@@ -1,0 +1,36 @@
+Name:		haslo
+Version:	1.0
+License:	BSD3
+Author:		Bartosz Wojcik
+Maintainer:	Bartosz Wojcik
+Copyright:  Copyright (c) 2011 Bartosz Wojcik
+Category:	Financial
+Synopsis:	Loan calculator engine.
+Stability:  experimental
+Build-type:	Simple
+Description: Loan calculator engine implementaing rules mentioned in paper "Haskell Loan Library".
+             See more here: https://github.com/bartoszw/haslo.
+
+Cabal-Version: >=1.2.3
+
+library
+  Build-Depends:	base, old-time, wtk, mtl
+  Exposed-Modules: Haslo
+  Other-Modules: Haslo.BasicType,
+                 Haslo.CalcCalendar,
+                 Haslo.Parameters,
+                 Haslo.ErrorHandling,
+                 Haslo.InstalmentPlan,
+                 Haslo.InstalmentPlanProps,
+                 Haslo.CalcConfigurationType,
+                 Haslo.CalcConstructors,
+                 Haslo.Calculator
+
+Executable hasloQC
+  Build-Depends:	old-time, QuickCheck, mtl, time, wtk
+  Main-Is: HasloQC.hs
+
+Executable hasloSample
+  Build-Depends:	old-time, QuickCheck, mtl, time, wtk
+  Main-Is: Sample.hs
+
